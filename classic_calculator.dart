@@ -1,11 +1,31 @@
 import 'dart:io';
 
+class Calculator {
+  void add(double a, double b) {
+    stdout.writeln(a + b);
+  }
+
+  void subtract(double a, double b) {
+    stdout.writeln(a - b);
+  }
+
+  void multiply(double a, double b) {
+    stdout.writeln(a * b);
+  }
+
+  void divide(double a, double b) {
+    stdout.writeln(a / b);
+  }
+}
+
 void main(List<String> args) {
+  Calculator calc = Calculator();
+
   stdout.write("Enter the first number: ");
-  double num1 = double.parse(stdin.readLineSync()!);
+  double a = double.parse(stdin.readLineSync()!);
 
   stdout.write("Enter the second number: ");
-  double num2 = double.parse(stdin.readLineSync()!);
+  double b = double.parse(stdin.readLineSync()!);
 
   stdout.write("Pick the Operation: ");
   stdout.writeln("+, -, *, /");
@@ -15,16 +35,16 @@ void main(List<String> args) {
 
   switch (operator) {
     case '+':
-      stdout.write(num1 + num2);
+      calc.add(a, b);
       break;
     case '-':
-      stdout.write(num1 - num2);
+      calc.subtract(a, b);
       break;
     case '*':
-      stdout.write(num1 * num2);
+      calc.multiply(a, b);
       break;
     case '/':
-      stdout.write(num1 / num2);
+      calc.divide(a, b);
       break;
     default:
       stdout.write("Invalid Operation");

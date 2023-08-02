@@ -8,10 +8,9 @@ class Person {
 class Student extends Person {
   int? student_id;
 
-  Student(String name, int age, int student_id) {
+  Student(String name, int age, this.student_id) {
     this.name = name;
     this.age = age;
-    this.student_id = student_id;
   }
   @override
   String toString() {
