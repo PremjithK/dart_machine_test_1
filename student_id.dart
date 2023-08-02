@@ -24,6 +24,7 @@ class Student extends Person {
 }
 
 void main(List<String> args) {
+  //stdout.writeln(Person().toString());
   Student s1 = Student("Arjun", 17, 1011);
   Student s2 = Student("Vinod", 15, 1222);
   stdout.write(s1.toString());

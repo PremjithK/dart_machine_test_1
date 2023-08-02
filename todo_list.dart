@@ -16,7 +16,7 @@ void main(List<String> args) {
 
 ''');
 
-    int option = int.parse(stdin.readLineSync()!);
+    int? option = int.parse(stdin.readLineSync()!);
     switch (option) {
       // Viewing Case
       case 1:
